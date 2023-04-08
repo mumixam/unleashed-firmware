@@ -33,6 +33,13 @@ void subghz_scene_saved_menu_on_enter(void* context) {
         SubmenuIndexDelete,
         subghz_scene_saved_menu_submenu_callback,
         subghz);
+    
+    submenu_add_item(
+        subghz->submenu,
+        "Copy",
+        SubmenuIndexCopy,
+        subghz_scene_saved_menu_submenu_callback,
+        subghz);
 
     submenu_set_selected_item(
         subghz->submenu,
