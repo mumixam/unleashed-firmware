@@ -68,6 +68,12 @@ bool subghz_scene_saved_menu_on_event(void* context, SceneManagerEvent event) {
             scene_manager_next_scene(subghz->scene_manager, SubGhzSceneSaveName);
             return true;
         }
+        } else if(event.event == SubmenuIndexCopy) {
+            scene_manager_set_scene_state(
+                subghz->scene_manager, SubGhzSceneSavedMenu, SubmenuIndexCopy);
+            scene_manager_next_scene(subghz->scene_manager, SubGhzSceneSaveName);
+            return true;
+        }
     }
     return false;
 }
